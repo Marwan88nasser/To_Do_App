@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To_DO_List</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div
+      class="container d-flex flex-column align-items-center justify-content-center mh-100 w-100 py-5"
+    >
+    
+    <form
+        id="tasks-form"
+        class="form-tasks p-3 d-flex flex-column flex-sm-row align-items-center mb-4"
+      >
+        <input
+          type="text"
+          placeholder="Write Your Task"
+          id="input-task"
+          class="me-sm-3 w-75 mb-3 mb-sm-0 rounded-3 border-0"
+        />
+        <button
+          id="add-btn"
+          type="submit"
+          class="add-task w-25 rounded-3 position-relative border-0 text-white"
+        >
+          Add
+        </button>
+      
+      </form>
+      
+      <div class="tasks-container p-3 mh-100"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

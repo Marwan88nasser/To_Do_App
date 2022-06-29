@@ -1,0 +1,86 @@
+body {
+  background-color: #2e3267;
+  /* background-color: #424890; */
+}
+
+.container .form-tasks,
+.tasks-container {
+  background-color: #1f2641;
+  width: 580px;
+}
+
+@media (max-width: 576px) {
+  .container .form-tasks,
+  .tasks-container {
+    width: 300px;
+  }
+  .container .form-tasks [type="text"] {
+    width: 100% !important;
+  }
+  .container .form-tasks [type="submit"] {
+    width: 100% !important;
+  }
+}
+
+.container .form-tasks [type="text"] {
+  padding: 9px;
+}
+
+.container .form-tasks [type="text"]:focus {
+  outline: none;
+}
+.container .form-tasks [type="text"]:focus::placeholder {
+  opacity: 0;
+  transition: 0.4s;
+}
+
+
+.container .form-tasks .add-task {
+  background-color: #6c63ff;
+  overflow: hidden;
+  z-index: 1;
+  padding: 10px;
+}
+
+.container .form-tasks .add-task::before {
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 0px;
+  height: 0px;
+  background-color: #00bf8e;
+  transition: width .5s, height .5s;
+  z-index: -1;
+}
+
+.container .form-tasks .add-task:hover:before {
+  width: 400px;
+  height: 400px;
+}
+
+.container .tasks-container .task {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #6c63ff;
+  transition: .3s;
+}
+
+.container .tasks-container .task:hover {
+  background-color: #5c53dc;
+}
+
+.container .tasks-container .task:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+
+.container .tasks-container .task.done {
+  opacity: .4;
+}
+
+.container .tasks-container .task .delate-task {
+  background-color: #f75842 !important;
+}
